@@ -12,6 +12,8 @@
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="styles.css">
+        <style>
+         </style>
 
         <title>Stellium I&ET</title>
     </head>
@@ -29,9 +31,6 @@
                         </li>
                         <li class="nav__item">
                             <a href="#specs" class="nav__link">Innovation Stack</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="./stocksnap/Admin/index.html" class="nav__link">StockSnap</a>
                         </li>
                         <li class="nav__item">
                             <a href="#case" class="nav__link">Our Team</a>
@@ -94,38 +93,47 @@
 
             <!--=============== SPECS ===============-->
             <section class="specs section grid" id="specs">
-                <h2 class="section__title section__title-gradient">Specs</h2>
-
-                <div class="specs__container container grid">
-                    <div class="specs__content grid">
-                        <div class="specs__data">
-                            <i class="ri-bluetooth-line specs__icon"></i>
-                            <h3 class="specs__title">Connection</h3>
-                            <span class="specs__subtitle">Bluetooth v5.2</span>
-                        </div>
-    
-                        <div class="specs__data">
-                            <i class="ri-battery-charge-line specs__icon"></i>
-                            <h3 class="specs__title">Battery</h3>
-                            <span class="specs__subtitle">Duration 40h</span>
-                        </div>
-    
-                        <div class="specs__data">
-                            <i class="ri-plug-line specs__icon"></i>
-                            <h3 class="specs__title">Load</h3>
-                            <span class="specs__subtitle">Fast charge 4.2-AAC</span>
-                        </div>
-    
-                        <div class="specs__data">
-                            <i class="ri-mic-line specs__icon"></i>
-                            <h3 class="specs__title">Microphone</h3>
-                            <span class="specs__subtitle">Supports Apple Siri <br> and Google</span>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <img src="https://github.com/bedimcode/responsive-landing-page-headphones/blob/main/assets/img/specs.png?raw=true" alt="" class="specs__img">
-                    </div>
+                <h2 class="section__title section__title-gradient">Innovation Stack</h2>
+                <div style="display: flex;">
+                    <figure style="width: 100%;">
+                        
+                        <ul class="tree">
+                          <li><span>Innovation</span>
+                            <ul>
+                              <li><span>Analytics</span>
+                                <ul>
+                                  <li><span>AWA</span></li>
+                                  <li><span>ATMA</span></li>
+                                  <li><span>Auto Pilot</span></li>
+                                  
+                                </ul>
+                              </li>
+                              <li><span>Products</span>
+                                <ul>
+                                  <li><span>Smart Slot</span> </li>
+                                  <li><span><a href="./stocksnap/Admin/index.html">StockSnap</a></span><a href="./stocksnap/Admin/index.html">-></a></li>
+                                  <li><span>4Kast.ai</span></li>
+                                  <li><span>PLC Emulator</span></li>
+                                </ul>
+                              </li>
+                              <li><span>Accelerators</span>
+                                <ul>
+                                  <li><span>ACCEL</span></li>
+                                  <li><span>EWM Config Bots</span></li>
+                                </ul>
+                              </li>
+                              <li><span>POC's</span>
+                                <ul>
+                                  <li><span>Drones for PI</span></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </figure>
+                      <div>
+                        <img src="./img/plan.jpeg" width="100%" style="padding: 80px; border-radius: 30px;" alt="">
+                      </div>
                 </div>
             </section>
 
@@ -318,5 +326,6 @@
 
         <!--=============== MAIN JS ===============-->
         <script src="script.js"></script>
+        
     </body>
 </html>
