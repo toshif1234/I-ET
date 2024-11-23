@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4Kast.ai | Future of Forecasting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <h1 class="nav__logo">4Kast.ai</h1>
+      <div class="nav__toggle" id="nav-toggle">
+        <i>&#9776;</i>
+      </div>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="../index.html" class="nav__link">Home</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#why" class="nav__link">Why 4Kast.ai</a></li>
+          <li><a href="#features" class="nav__link">Features</a></li>
+        </ul>
+        <div class="nav__close" id="nav-close">&#x2715;</div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+    <!-- Home Section -->
+    <section class="section" id="home">
+      <div class="container grid">
+        <div>
+          <h1 class="section__title">
+            Welcome to <span class="section__title-gradient">4Kast.ai</span>
+          </h1>
+          <p>
+            Redefining demand forecasting with precision, agility, and actionable insights powered by advanced AI algorithms.
+          </p>
+        </div>
+        <img src="./img/first.jpeg" alt="4Kast.ai Overview">
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__title section__title-gradient">About Us</h2>
+        <p>
+          At Stellium, we stand at the forefront of supply chain technology innovation. Our Innovations and Emerging Technologies (I&ET) vertical is dedicated to developing cutting-edge tools like 4Kast.ai to help businesses anticipate and adapt to market trends.
+        </p>
+        <p>
+          With a rich legacy in supply chain planning and implementation, Stellium offers expertise and solutions that redefine supply chain efficiency and performance.
+        </p>
+      </div>
+    </section>
+
+    <!-- Why 4Kast.ai Section -->
+    <section class="section" id="why">
+      <div class="container">
+        <h2 class="section__title section__title-gradient">Why 4Kast.ai?</h2>
+        <p>4Kast.ai delivers precision demand forecasting by:</p>
+        <ul id="ul">
+          <li id="li">Leveraging advanced AI algorithms to analyze historical data and market trends.</li>
+          <li id="li">Providing actionable analytics that empower informed decision-making.</li>
+          <li id="li">Offering customizable forecasting scenarios for tailored business planning.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+      <div class="container grid">
+        <h2 class="section__title section__title-gradient">Features</h2>
+        <div>
+          <h3>Precision Demand Forecasting</h3>
+          <p>Anticipate customer needs with highly accurate forecasts to minimize stockouts and overstock situations.</p>
+        </div>
+        <div>
+          <h3>Actionable Analytics</h3>
+          <p>Transform complex data into clear, actionable insights with an intuitive interface.</p>
+        </div>
+        <div>
+          <h3>Customizable Scenarios</h3>
+          <p>Create multiple forecasting scenarios based on various assumptions for better planning and risk management.</p>
+        </div>
+        <div>
+          <h3>Continuous Learning</h3>
+          <p>Leverage machine learning to ensure forecasts stay accurate and relevant as market conditions evolve.</p>
+        </div>
+      </div>
+    </section>
+
+   
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Stellium Inc. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Navigation menu toggle
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.getElementById('nav-toggle');
+    const navClose = document.getElementById('nav-close');
+
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navMenu.style.top = '0';
+      });
+    }
+
+    if (navClose) {
+      navClose.addEventListener('click', () => {
+        navMenu.style.top = '-100%';
+      });
+    }
+  </script>
+</body>
+</html>

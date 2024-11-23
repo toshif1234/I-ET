@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockSnap | Future of Stock Take</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <h1 class="nav__logo">StockSnap</h1>
+      <div class="nav__toggle" id="nav-toggle">
+        <i>&#9776;</i>
+      </div>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="../index.html" class="nav__link">Home</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#why" class="nav__link">Why StockSnap</a></li>
+          <li><a href="#features" class="nav__link">Features</a></li>
+          <li><a href="#benefits" class="nav__link">Key Benefits</a></li>
+        </ul>
+        <div class="nav__close" id="nav-close">&#x2715;</div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+    <!-- Home Section -->
+    <section class="section" id="home">
+        <div class="container grid">
+          <div>
+            <h1 class="section__title">
+              Welcome to <span class="section__title-gradient">StockSnap</span>
+            </h1>
+            <p>Redefining inventory management with cutting-edge technology for accuracy, efficiency, and real-time insights.</p>
+            <div class="buttons" style="margin-top: 10px; align-items: center; text-align: center;">
+              <a href="./hht/" class="btn">HHD/HHT</a>
+              <a href="./Admin/" class="btn  btn-outline">Admin Portal</a>
+            </div>
+          </div>
+          <img src="./Admin/src/images/first.png" alt="StockSnap Overview">
+        </div>
+      </section>
+      
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__title section__title-gradient">About Us</h2>
+        <p>
+          At Stellium, we address long-standing supply chain challenges with innovative solutions. With over a decade of experience in defining and designing supply chain processes and systems, we help organizations anticipate variability, build agility, and ensure operational reactivity.
+        </p>
+        <p>
+          StockSnap, a cross-platform app, provides real-time data synchronization across mobile, web, and cloud systems. It's tailored to streamline stock audits, reduce errors, and offer powerful analytics to enable quicker, data-driven decisions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Why StockSnap Section -->
+    <section class="section" id="why">
+      <div class="container">
+        <h2 class="section__title section__title-gradient">Why StockSnap?</h2>
+        <p>StockSnap transforms the stock-taking process by:</p>
+        <ul id="ul">
+          <li id="li">Improving stock count accuracy.</li>
+          <li id="li">Reducing manual errors and data entry issues.</li>
+          <li id="li">Optimizing inventory control with real-time insights.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+      <div class="container grid">
+        <h2 class="section__title section__title-gradient">Features</h2>
+        <div>
+          <h3>Real-Time Analytics</h3>
+          <p>Significantly improve decision-making processes by up to 5x with actionable insights.</p>
+        </div>
+        <div>
+          <h3>Cross-Platform Functionality</h3>
+          <p>Manage inventory from any device with seamless synchronization between mobile and web.</p>
+        </div>
+        <div>
+          <h3>Data Integrity</h3>
+          <p>Accurately track inventory, streamline data entry, and ensure error-free processes.</p>
+        </div>
+        <div>
+          <h3>Version Control</h3>
+          <p>Reduce recounting time by 20-25% with efficient version management.</p>
+        </div>
+        <div>
+          <h3>Auth0 Security</h3>
+          <p>Prevent up to 99.9% of security breaches and enhance login speeds by 30%.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Benefits Section -->
+    <section class="section" id="benefits">
+      <div class="container">
+        <h2 class="section__title section__title-gradient">Key Benefits</h2>
+        <ul id="ul">
+          <li id="li"><strong>12+ Years of Supply Chain Experience:</strong> Deep expertise in inventory and logistics solutions.</li>
+          <li id="li"><strong>65+ Digital Implementations:</strong> Proven success in streamlining supply chain systems.</li>
+          <li id="li"><strong>50% Productivity Gains:</strong> Save time with efficient stock management processes.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Stellium Inc. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Navigation menu toggle
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.getElementById('nav-toggle');
+    const navClose = document.getElementById('nav-close');
+
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navMenu.style.top = '0';
+      });
+    }
+
+    if (navClose) {
+      navClose.addEventListener('click', () => {
+        navMenu.style.top = '-100%';
+      });
+    }
+  </script>
+</body>
+</html>
