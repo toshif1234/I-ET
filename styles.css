@@ -771,7 +771,7 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
-  color: rgb(0, 0, 0);
+  color: rgb(70, 70, 70);
   position: relative;
 }
 
@@ -836,7 +836,7 @@ ul.tree:before {
 }
 
 .tree li span a {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
