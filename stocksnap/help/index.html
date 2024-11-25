@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StockSnap Help Portal</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <button id="sidebarCollapse" class="mobile-toggle">
-        <i class="fas fa-bars"></i>
+        <i class="fa-solid fa-bars-staggered"></i>
     </button>
     
     <div class="wrapper">
@@ -19,35 +20,45 @@
             </div>
             <ul class="list-unstyled components">
                 <li>
-                    <a href="#admin-console" class="dropdown-toggle">Admin Console</a>
+                    <a href="#admin-console" class="dropdown-toggle">
+                        <i class="fa-solid fa-gear"></i> Admin Console
+                    </a>
                     <ul class="collapse">
-                        <li><a href="#user-entry">User Entry Page</a></li>
-                        <li><a href="#roles">Roles</a></li>
+                        <li><a href="#user-entry"><i class="fa-solid fa-user"></i> User Entry Page</a></li>
+                        <li><a href="#roles"><i class="fa-solid fa-users"></i> Roles</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#customization" class="dropdown-toggle">Customization</a>
+                    <a href="#customization" class="dropdown-toggle">
+                        <i class="fa-solid fa-palette"></i> Customization
+                    </a>
                     <ul class="collapse">
-                        <li><a href="#uom">Unit of Measure</a></li>
-                        <li><a href="#field-toggles">Field Toggles</a></li>
+                        <li><a href="#uom"><i class="fa-solid fa-ruler"></i> Unit of Measure</a></li>
+                        <li><a href="#field-toggles"><i class="fa-solid fa-toggle-on"></i> Field Toggles</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#import-master-data" class="dropdown-toggle">Import Master Data</a>
+                    <a href="#import-master-data" class="dropdown-toggle">
+                        <i class="fa-solid fa-file-import"></i> Import Master Data
+                    </a>
                     <ul class="collapse">
-                        <li><a href="#template">Using Template</a></li>
-                        <li><a href="#sap-export">SAP Export</a></li>
+                        <li><a href="#template"><i class="fa-solid fa-file-lines"></i> Using Template</a></li>
+                        <li><a href="#sap-export"><i class="fa-solid fa-file-export"></i> SAP Export</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#manage-entries" class="dropdown-toggle">Manage Entries</a>
+                    <a href="#manage-entries" class="dropdown-toggle">
+                        <i class="fa-solid fa-list-check"></i> Manage Entries
+                    </a>
                     <ul class="collapse">
-                        <li><a href="#approval-process">Approval Process</a></li>
-                        <li><a href="#legend">Legend</a></li>
+                        <li><a href="#approval-process"><i class="fa-solid fa-check-double"></i> Approval Process</a></li>
+                        <li><a href="#legend"><i class="fa-solid fa-info-circle"></i> Legend</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#approved">Approved</a>
+                    <a href="#approved">
+                        <i class="fa-solid fa-check-circle"></i> Approved
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -59,7 +70,7 @@
             
             <main>
                 <section id="admin-console">
-                    <h2>Admin Console</h2>
+                    <h2><i class="fa-solid fa-gear"></i> Admin Console</h2>
                     <h3 id="user-entry">User Entry Page:</h3>
                     <p>The user entry page allows the admin to add/delete users as well as toggle user access to the app and define specific roles.</p>
                     <ul>
@@ -77,7 +88,7 @@
                 </section>
                 
                 <section id="customization">
-                    <h2>Customization</h2>
+                    <h2><i class="fa-solid fa-palette"></i> Customization</h2>
                     <p>The Customizing Screen allows the admin/manager to configure settings for the handheld terminal (HHT). These tools help tailor the HHT interface without compromising data integrity.</p>
                     <h3 id="uom">Unit of Measure (UoM):</h3>
                     <p>Enter multiple units of measure (UoMs) for the operator to use, separated by commas. Example Template: EA, CV, PAL.</p>
@@ -89,7 +100,7 @@
                 </section>
                 
                 <section id="import-master-data">
-                    <h2>Import Master Data</h2>
+                    <h2><i class="fa-solid fa-file-import"></i> Import Master Data</h2>
                     <p>The Import Master Data Screen allows users to upload master data into the application. There are two ways to upload master data:</p>
                     <h3 id="template">Using the Template:</h3>
                     <ul>
@@ -107,7 +118,7 @@
                 </section>
                 
                 <section id="manage-entries">
-                    <h2>Manage Entries</h2>
+                    <h2><i class="fa-solid fa-list-check"></i> Manage Entries</h2>
                     <p>The Manage Entries Screen allows the manager to review, approve, and update bin entries. This screen simplifies managing bin entries while ensuring accuracy and efficiency in the approval process.</p>
                     <h3 id="approval-process">Approval Process:</h3>
                     <p>Admin/Managers have the ability to approve which entries are ready to be exported adding another layer of manual data verification. The steps to approve are as follows:</p>
@@ -125,7 +136,7 @@
                 </section>
                 
                 <section id="approved">
-                    <h2>Approved</h2>
+                    <h2><i class="fa-solid fa-check-circle"></i> Approved</h2>
                     <p>Mass Fill: This feature allows users to update multiple fields across several entries at once, saving time and effort when managing large datasets.</p>
                 </section>
             </main>
@@ -141,9 +152,13 @@
             // Toggle sidebar on mobile
             const sidebarCollapse = document.getElementById('sidebarCollapse');
             const sidebar = document.getElementById('sidebar');
+            const toggleIcon = sidebarCollapse.querySelector('i');
             
             sidebarCollapse.addEventListener('click', function() {
                 sidebar.classList.toggle('active');
+                // Toggle icon between bars-staggered and xmark
+                toggleIcon.classList.toggle('fa-bars-staggered');
+                toggleIcon.classList.toggle('fa-xmark');
             });
 
             // Dropdown toggles
@@ -170,19 +185,10 @@
                 link.addEventListener('click', function() {
                     if (window.innerWidth <= 768) {
                         sidebar.classList.remove('active');
+                        toggleIcon.classList.add('fa-bars-staggered');
+                        toggleIcon.classList.remove('fa-xmark');
                     }
                 });
             });
-
-            // Close sidebar when clicking outside (mobile)
-            document.addEventListener('click', function(e) {
-                if (window.innerWidth <= 768) {
-                    if (!sidebar.contains(e.target) && !sidebarCollapse.contains(e.target) && sidebar.classList.contains('active')) {
-                        sidebar.classList.remove('active');
-                    }
-                }
-            });
         });
     </script>
-</body>
-</html>
