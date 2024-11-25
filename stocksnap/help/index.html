@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockSnap Help Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <button id="sidebarCollapse" class="mobile-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h2>Contents</h2>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#admin-console" class="dropdown-toggle">Admin Console</a>
+                    <ul class="collapse">
+                        <li><a href="#user-entry">User Entry Page</a></li>
+                        <li><a href="#roles">Roles</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#customization" class="dropdown-toggle">Customization</a>
+                    <ul class="collapse">
+                        <li><a href="#uom">Unit of Measure</a></li>
+                        <li><a href="#field-toggles">Field Toggles</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#import-master-data" class="dropdown-toggle">Import Master Data</a>
+                    <ul class="collapse">
+                        <li><a href="#template">Using Template</a></li>
+                        <li><a href="#sap-export">SAP Export</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#manage-entries" class="dropdown-toggle">Manage Entries</a>
+                    <ul class="collapse">
+                        <li><a href="#approval-process">Approval Process</a></li>
+                        <li><a href="#legend">Legend</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#approved">Approved</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            <header>
+                <h1>StockSnap Help Portal</h1>
+            </header>
+            
+            <main>
+                <section id="admin-console">
+                    <h2>Admin Console</h2>
+                    <h3 id="user-entry">User Entry Page:</h3>
+                    <p>The user entry page allows the admin to add/delete users as well as toggle user access to the app and define specific roles.</p>
+                    <ul>
+                        <li><strong>Status:</strong> It is the ability to enable or disable a user's access to the app. The admin can toggle the status on or off using a checkbox to either grant or restrict the user's access to the app.</li>
+                        <li><strong>Filtering by Status:</strong> To filter users by status, use the search or filter options provided in the admin console. Use 1 to filter active users and use 0 to filter inactive users from the database.</li>
+                        <li><strong>Roles:</strong> Roles determine the level of access and features available to a user within the application. Each role is designed to suit different responsibilities and access needs.</li>
+                    </ul>
+                    <h3 id="roles">Roles:</h3>
+                    <p>The Roles defined in StockSnap are as follows:</p>
+                    <ul>
+                        <li><strong>Admin Role:</strong> A super-user role that provides access to all features of the application. Admins can manage all aspects of the system, including user management and version control.</li>
+                        <li><strong>Manager Role:</strong> Has access to most features of the admin console but is restricted to specific warehouses. The manager cannot add new users or manage version control of the app.</li>
+                        <li><strong>Operator Role:</strong> Can use the handheld terminal for entering data into the application. Operators do not have access to the admin console or management features.</li>
+                    </ul>
+                </section>
+                
+                <section id="customization">
+                    <h2>Customization</h2>
+                    <p>The Customizing Screen allows the admin/manager to configure settings for the handheld terminal (HHT). These tools help tailor the HHT interface without compromising data integrity.</p>
+                    <h3 id="uom">Unit of Measure (UoM):</h3>
+                    <p>Enter multiple units of measure (UoMs) for the operator to use, separated by commas. Example Template: EA, CV, PAL.</p>
+                    <h3 id="field-toggles">Field Toggles:</h3>
+                    <ul>
+                        <li><strong>Field Toggles:</strong> Use checkboxes to select which fields should appear on the HHT for the operator. Toggle them on or off to customize visibility.</li>
+                        <li><strong>Field Names:</strong> Field names can be edited to personalize the HHT screen for your business. Ensure the nature of the fields remains unchanged. For instance: Do not write "Product" in the place of the "Bin" field or vice versa.</li>
+                    </ul>
+                </section>
+                
+                <section id="import-master-data">
+                    <h2>Import Master Data</h2>
+                    <p>The Import Master Data Screen allows users to upload master data into the application. There are two ways to upload master data:</p>
+                    <h3 id="template">Using the Template:</h3>
+                    <ul>
+                        <li>Download the provided template.</li>
+                        <li>Fill in the required fields in the template file.</li>
+                        <li>Upload the completed template back into the system.</li>
+                    </ul>
+                    <h3 id="sap-export">Updating SAP Export:</h3>
+                    <ul>
+                        <li>Export the LS11 bin or SE16 bin master data from SAP.</li>
+                        <li>Update the following field labels in the exported file to match the following format: Storage_Bin, Storage_Type, Storage_Section.</li>
+                        <li>Save and upload the updated file.</li>
+                    </ul>
+                    <p><strong>Important Notes:</strong> If duplicate bins are found in the uploaded data, none of the bins will be uploaded. Correct the duplicates and re-upload the file. This functionality ensures a seamless and accurate import of master data.</p>
+                </section>
+                
+                <section id="manage-entries">
+                    <h2>Manage Entries</h2>
+                    <p>The Manage Entries Screen allows the manager to review, approve, and update bin entries. This screen simplifies managing bin entries while ensuring accuracy and efficiency in the approval process.</p>
+                    <h3 id="approval-process">Approval Process:</h3>
+                    <p>Admin/Managers have the ability to approve which entries are ready to be exported adding another layer of manual data verification. The steps to approve are as follows:</p>
+                    <ul>
+                        <li>Select an entry/entries that you want to export and click the approve button.</li>
+                        <li>Approved entries are flagged in green color.</li>
+                    </ul>
+                    <p><strong>Note:</strong> Bins can only be approved once. After approval, no further changes can be made to the bin entry.</p>
+                    <h3 id="legend">Legend:</h3>
+                    <p>Entries are marked with colored flags to indicate their status:</p>
+                    <ul>
+                        <li><strong>Approved:</strong> Indicates the bin has been reviewed and approved.</li>
+                        <li><strong>Not Approved:</strong> Indicates the bin is pending review or requires changes.</li>
+                    </ul>
+                </section>
+                
+                <section id="approved">
+                    <h2>Approved</h2>
+                    <p>Mass Fill: This feature allows users to update multiple fields across several entries at once, saving time and effort when managing large datasets.</p>
+                </section>
+            </main>
+            
+            <footer>
+                <p>&copy; 2024 StockSnap Help Portal</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Toggle sidebar on mobile
+            const sidebarCollapse = document.getElementById('sidebarCollapse');
+            const sidebar = document.getElementById('sidebar');
+            
+            sidebarCollapse.addEventListener('click', function() {
+                sidebar.classList.toggle('active');
+            });
+
+            // Dropdown toggles
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+            
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const submenu = this.nextElementSibling;
+                    submenu.classList.toggle('show');
+                    
+                    // Close other open submenus
+                    dropdownToggles.forEach(otherToggle => {
+                        if (otherToggle !== toggle) {
+                            otherToggle.nextElementSibling.classList.remove('show');
+                        }
+                    });
+                });
+            });
+
+            // Close sidebar when clicking on a link (mobile)
+            const sidebarLinks = document.querySelectorAll('#sidebar a');
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        sidebar.classList.remove('active');
+                    }
+                });
+            });
+
+            // Close sidebar when clicking outside (mobile)
+            document.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    if (!sidebar.contains(e.target) && !sidebarCollapse.contains(e.target) && sidebar.classList.contains('active')) {
+                        sidebar.classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
